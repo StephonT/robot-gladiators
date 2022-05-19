@@ -1,3 +1,4 @@
+//player data
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -5,12 +6,12 @@ var playerMoney = 10;
 console.log(playerName, playerHealth, playerAttack); //You can also log multiple values at once like this
 
 //Enemy Data
-var enemyName = "Roberto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 //declared fight function
-var fight = function () {
+var fight = function (enemyNames) {
   //Alert players that a round has started
   window.alert("The fight has begun!");
 
@@ -26,9 +27,9 @@ var fight = function () {
     console.log(
       playerName +
         " attacked " +
-        enemyName +
+        enemyNames +
         " . " +
-        enemyName +
+        enemyNames +
         " now has " +
         enemyHealth +
         " health remaining."
@@ -37,7 +38,7 @@ var fight = function () {
     playerHealth = playerHealth - enemyAttack;
     //enemyName attacked playerName. playerName now has playerHealth left
     console.log(
-      enemyName +
+      enemyNames +
         " attacked " +
         playerName +
         " . " +
@@ -49,9 +50,9 @@ var fight = function () {
 
     //check enemy's health
     if (enemyHealth <= 0) {
-      window.alert(enemyName + " has died!");
+      window.alert(enemyNames + " has died!");
     } else {
-      window.alert(enemyName + " still has " + enemyHealth + " health left.");
+      window.alert(enemyNames + " still has " + enemyHealth + " health left.");
     }
 
     //check player's health
@@ -77,4 +78,6 @@ var fight = function () {
   }
 };
 
-fight();
+for (var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
