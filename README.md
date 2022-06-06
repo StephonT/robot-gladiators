@@ -10,4 +10,4 @@ In this project, I created a game called Robot Gladiators. At the start of the g
 
 ## Link
 
-<a href="https://stephont.github.io/robot-gladiators/"> "Press Play</a>
+<a href="https://stephont.github.io/robot-gladiators/"> "Press Play"</a>
